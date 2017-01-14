@@ -8,7 +8,6 @@ import java.util.concurrent.Executors;
 /**
  * This example shows how to execute multiple completable futures and wait for completion.
  * @author Andy
- *
  */
 public class MultipleCompletableFutureExample {
 
@@ -20,7 +19,7 @@ public class MultipleCompletableFutureExample {
 		// Create a list to store the completable futures
 		List<CompletableFuture<Void>> futureList = new LinkedList<>();
 		
-		// Iterate through the completable futures
+		// Create 10 asynchronus completable futures
 		for (int i = 0; i < 10; i++) {
 			final int test = i;
 			CompletableFuture<Void> cf = CompletableFuture.runAsync(() -> {
